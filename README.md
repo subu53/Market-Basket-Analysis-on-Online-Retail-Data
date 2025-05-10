@@ -54,34 +54,54 @@ graph TD
     B --> C[Transaction Encoding]
     C --> D[Apriori Algorithm]
     D --> E[Rule Generation]
-    E --> F[Analysis & Insights]
-Data Preprocessing
+    E --> F[Analysis &amp; Insights]
 
-python
-# Clean data
+# Data Preprocessing and Association Rule Mining
+
+## Overview
+This script cleans the dataset, encodes transactions, and applies the Apriori algorithm to discover frequent itemsets and association rules.
+
+## Requirements
+Ensure you have the necessary dependencies installed before running the script:
+
+```bash
+pip install mlxtend pandas numpy
+
+# Import necessary libraries
+import pandas as pd
+from mlxtend.frequent_patterns import apriori, association_rules
+
+# Load dataset (assuming df is already defined)
+# Data Cleaning
 df = df[df['Quantity'] > 0]
 df = df.dropna(subset=['CustomerID'])
-Transaction Encoding
 
-python
+# Transaction Encoding
 basket = (df.groupby(['InvoiceNo', 'Description'])['Quantity']
           .sum().unstack().reset_index()
           .fillna(0).set_index('InvoiceNo'))
-Association Rule Mining
 
-python
-from mlxtend.frequent_patterns import apriori, association_rules
-
+# Association Rule Mining
 frequent_itemsets = apriori(basket, min_support=0.02, use_colnames=True)
 rules = association_rules(frequent_itemsets, metric="lift", min_threshold=1)
-📊 Results & Insights
-Top Association Rules
-Antecedents	Consequents	Support	Confidence	Lift
-PINK REGENCY TEACUP AND SAUCER, ROSES REGENCY...	GREEN REGENCY TEACUP AND SAUCER	0.0205	0.8903	24.22
-GREEN REGENCY TEACUP AND SAUCER	PINK REGENCY TEACUP AND SAUCER, ROSES REGENCY...	0.0205	0.5572	24.22
+
+# Display results
+print("Frequent Itemsets:")
+print(frequent_itemsets)
+
+print("\nAssociation Rules:")
+print(rules)
+
+## 📊 Results & Insights
+# Top Association Rules
+
+Antecedents	                Consequents	            Support	Confidence	Lift
+PINK REGENCY TEACUP...	GREEN REGENCY TEACUP AND SAUCER	0.0205	0.8903	24.22
+GREEN REGENCY TEACUP AND SAUCER	PINK REGENCY TEACUP...	0.0205	0.5572	24.22
 PINK REGENCY TEACUP AND SAUCER	GREEN REGENCY TEACUP AND SAUCER	0.0243	0.8195	22.29
 GREEN REGENCY TEACUP AND SAUCER	PINK REGENCY TEACUP AND SAUCER	0.0243	0.6601	22.29
 ROSES REGENCY TEACUP AND SAUCER	GREEN REGENCY TEACUP AND SAUCER	0.0286	0.7021	19.10
+
 Key Findings 🔍:
 
 🏆 Exceptional Lift Values: 19-24x higher co-occurrence than random chance
@@ -154,4 +174,5 @@ Data Source: Dr Daqing Chen, Director: Public Analytics group. chend@lsbu.ac.uk
 UCI Machine Learning Repository
 
 mlxtend library contributors
+
 
