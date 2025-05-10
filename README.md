@@ -48,8 +48,6 @@ This project implements **Market Basket Analysis (MBA)** to discover product ass
 | `Country` | Customer location | String |
 
 ## 🧪 Methodology
-```mermaid
-graph TD
     A[Raw Data] --> B[Data Cleaning]
     B --> C[Transaction Encoding]
     C --> D[Apriori Algorithm]
@@ -167,10 +165,6 @@ Open a Pull Request
 
 ## 🙋‍♂️ Author
 
-Sammy S. Mutuku  
-📍 Nairobi, Kenya | 🌐 [LinkedIn](https://www.linkedin.com/in/samsubu/) | 💻 [GitHub](https://github.com/subu53)  
-📧 subusam5@gmail.com
-
 
 📜 License
 MIT License - see LICENSE for details
@@ -182,4 +176,8 @@ UCI Machine Learning Repository
 
 mlxtend library contributors
 
+## 🙋‍♂️ Author
 
+Sammy S. Mutuku  
+📍 Nairobi, Kenya | 🌐 [LinkedIn](https://www.linkedin.com/in/samsubu/) | 💻 [GitHub](https://github.com/subu53)  
+📧 subusam5@gmail.com
