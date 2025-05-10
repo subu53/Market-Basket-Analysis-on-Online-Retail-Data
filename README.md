@@ -165,6 +165,13 @@ Push to branch (git push origin feature/NewFeature)
 
 Open a Pull Request
 
+## 🙋‍♂️ Author
+
+Sammy S. Mutuku  
+📍 Nairobi, Kenya | 🌐 [LinkedIn](https://www.linkedin.com/in/samsubu/) | 💻 [GitHub](https://github.com/subu53)  
+📧 subusam5@gmail.com
+
+
 📜 License
 MIT License - see LICENSE for details
 
