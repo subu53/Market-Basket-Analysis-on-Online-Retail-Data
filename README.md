@@ -48,13 +48,24 @@ This project implements **Market Basket Analysis (MBA)** to discover product ass
 | `Country` | Customer location            | String |
 
 ## 🧪 Methodology
-```mermaid
-graph LR
-A[Raw Data] --> B[Data Cleaning]
-B --> C[Transaction Encoding]
-C --> D[Apriori Algorithm]
-D --> E[Rule Generation]
-E --> F[Analysis & Insights]
+
+1. **Data Cleaning**  
+   - Handle missing values (`CustomerID`, `Description`)  
+   - Remove canceled transactions (`InvoiceNo` starting with 'C')  
+   - Filter out negative quantities and invalid prices  
+
+2. **Transaction Encoding**  
+   - Convert transactions into a one-hot encoded matrix  
+
+3. **Frequent Itemset Generation**  
+   - Apply the **Apriori Algorithm** with a minimum support threshold  
+
+4. **Association Rule Generation**  
+   - Extract meaningful relationships between co-purchased items  
+
+5. **Analysis & Insights**  
+   - Evaluate rules using **Support**, **Confidence**, and **Lift**  
+   - Identify high-impact associations for business strategies  
 
 ## 📊 Results & Insights
 
