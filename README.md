@@ -90,6 +90,8 @@ print(frequent_itemsets)
 print("\nAssociation Rules:")
 print(rules)
 
+---------------------
+
 ## 📊 Results & Insights
 # Top Association Rules
 
@@ -100,23 +102,26 @@ PINK REGENCY TEACUP AND SAUCER	GREEN REGENCY TEACUP AND SAUCER	0.0243	0.8195	22.
 GREEN REGENCY TEACUP AND SAUCER	PINK REGENCY TEACUP AND SAUCER	0.0243	0.6601	22.29
 ROSES REGENCY TEACUP AND SAUCER	GREEN REGENCY TEACUP AND SAUCER	0.0286	0.7021	19.10
 
-Key Findings 🔍:
+## Key Findings 🔍:
 
-🏆 Exceptional Lift Values: 19-24x higher co-occurrence than random chance
+## 🏆 Exceptional Lift Values: 19-24x higher co-occurrence than random chance
 
-🔄 Reciprocal Relationships: Strong mutual influence between color variants
+#🔄 Reciprocal Relationships: Strong mutual influence between color variants
 
-💡 Cross-Selling Hotspot: Regency teacup sets show strongest associations
+#💡 Cross-Selling Hotspot: Regency teacup sets show strongest associations
 
-Metric Analysis:
+--------------------------
+## Metric Analysis:
 
-📦 Support: 2-3% of transactions contain these combinations
+# 📦 Support: 2-3% of transactions contain these combinations
 
-🎯 Confidence: Up to 89% likelihood of buying consequent with antecedent
+# 🎯 Confidence: Up to 89% likelihood of buying consequent with antecedent
 
-🚀 Lift: Indicates extremely non-random purchasing patterns
+# 🚀 Lift: Indicates extremely non-random purchasing patterns
 
-💻 Installation
+-------------------
+
+## 💻 Installation
 bash
 git clone https://github.com/yourusername/market-basket-analysis.git
 cd market-basket-analysis
@@ -162,19 +167,18 @@ Commit changes (git commit -m 'Add NewFeature')
 Push to branch (git push origin feature/NewFeature)
 
 Open a Pull Request
+----------------------------------
 
-## 🙋‍♂️ Author
-
-
-📜 License
+##📜 License
 MIT License - see LICENSE for details
 
-🙏 Acknowledgements
-Data Source: Dr Daqing Chen, Director: Public Analytics group. chend@lsbu.ac.uk
+## 🙏 Acknowledgements
+# Data Source: Dr Daqing Chen, Director: Public Analytics group. chend@lsbu.ac.uk
 
-UCI Machine Learning Repository
+# UCI Machine Learning Repository
 
-mlxtend library contributors
+# mlxtend library contributors
+-----------------------------------
 
 ## 🙋‍♂️ Author
 
